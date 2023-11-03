@@ -6,19 +6,19 @@
 
 NodeMCU 코드는 센서 데이터를 수집하고, MQTT를 통해 이를 웹 서버에 전송하는 역할을 합니다. 또한, 웹 서버로부터 받은 명령을 통해 LED와 USB LED의 상태를 제어합니다. 
 
-[NodeMCU 코드 보기](#your-link-here)
+[NodeMCU 코드]()
 
 ## 2. 웹 서버 코드 
 
 웹 서버는 Flask 기반으로 작성되었습니다. 웹 서버는 MQTT를 통해 NodeMCU로부터 받은 센서 데이터를 저장하고, 웹 페이지를 통해 이를 사용자에게 표시합니다. 또한, 웹 페이지를 통해 사용자의 명령을 받아 MQTT를 통해 NodeMCU에 전달하여 LED와 USB LED의 상태를 제어합니다. 
 
-[웹 서버 코드 보기](#your-link-here)
+[웹 서버 코드 보기](#Design/project1_flask_mqtt.py)
 
 ## 3. 웹 페이지 코드
 
 웹 페이지는 Bootstrap을 이용하여 제작되었습니다. 웹 페이지는 웹 서버로부터 받은 센서 데이터를 표시하고, 사용자의 명령을 웹 서버에 전달하는 인터페이스를 제공합니다. 
 
-[웹 페이지 코드 보기](#your-link-here)
+[웹 페이지 코드 보기](#Design/templates/index.html)
 
 ## 사용 방법
 
