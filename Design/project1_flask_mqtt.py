@@ -80,10 +80,15 @@ def get_command_21900764(cmd):
         mqtt.publish(pub_topic_21900764, 'usbledon')
     elif cmd == 'usbledoff':
         mqtt.publish(pub_topic_21900764, 'usbledoff')
+    elif cmd == 'change_mode':
+        if view_mode == 1:
+            view_mode = 0
+        else:
+            view_mode = 1
 
     if view_mode == 0:
         return render_template('index.html', json_data=json_data)
-    elif view_mode == 1:
+    else :
         return render_template('index_easy_view.html', json_data=json_data)
 
 # cmd = {led, ledon, ledoff, usbled, usbledon, usbledoff}
@@ -129,22 +134,26 @@ def get_command_21800677(cmd):
 # cmd = {led, ledon, ledoff, usbled, usbledon, usbledoff}
 @app.route('/iot/nth405/<cmd>') 
 def get_command_nth405(cmd):
-	global mqtt_message
+    global mqtt_message
     
-	if cmd == 'led':
-		mqtt.publish(pub_topic_nth405, 'led')
-	elif cmd == 'ledon':
-		mqtt.publish(pub_topic_nth405, 'ledon')
-	elif cmd == 'ledoff':
-		mqtt.publish(pub_topic_nth405, 'ledoff')
+    if cmd == 'led':
+        mqtt.publish(pub_topic_nth405, 'led')
+    elif cmd == 'ledon':
+        mqtt.publish(pub_topic_nth405, 'ledon')
+    elif cmd == 'ledoff':
+        mqtt.publish(pub_topic_nth405, 'ledoff')
+    elif cmd == 'usbled':
+        mqtt.publish(pub_topic_nth405, 'usbled')
+    elif cmd == 'usbledon':
+        mqtt.publish(pub_topic_nth405, 'usbledon')
+    elif cmd == 'usbledoff':
+        mqtt.publish(pub_topic_nth405, 'usbledoff')
 
-	elif cmd == 'usbled':
-		mqtt.publish(pub_topic_nth405, 'usbled')
-	elif cmd == 'usbledon':
-		mqtt.publish(pub_topic_nth405, 'usbledon')
-	elif cmd == 'usbledoff':
-		mqtt.publish(pub_topic_nth405, 'usbledoff')
-	return render_template('index.html', json_data=json_data) 
+    if view_mode == 0:
+        return render_template('index.html', json_data=json_data)
+    else :
+        return remder_template('index_easy_view.html', json_data=json_data)
+
 
 @app.errorhandler(404)
 def not_found_error(error):
