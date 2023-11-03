@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from flask_mqtt import Mqtt
 import time # library for time delay
+import json
 
 app = Flask(__name__)
 
@@ -198,36 +199,40 @@ def handle_mqtt_message(client, userdata, message):
     topic = str(message.topic)
     payload = str(message.payload)[2:-1]
 
-    if topic == sub_topic_dht22_h_21900764:
-        json_data['humidity_21900764'] = payload 
-    elif topic == sub_topic_dht22_t_21900764:
-        json_data['temperature_21900764'] = payload 
+    if topic == sub_topic_dht22_21900764:
+        payload = json.loads(payload)
+        json_data['humidity_21900764'] = payload["humidity"]
+        json_data['temperature_21900764'] = payload["temperature"]
     elif topic == sub_topic_cds_21900764:
         json_data['light_intensity_21900764'] = payload 
-    
-    elif topic == sub_topic_dht22_h_22100768:
-        json_data['humidity_22100768'] = payload 
-    elif topic == sub_topic_dht22_t_22100768:
-        json_data['temperature_22100768'] = payload 
+
+    elif topic == sub_topic_dht22_22100768:
+        payload = json.loads(payload)
+        json_data['humidity_22100768'] = payload["humidity"]
+        json_data['temperature_22100768'] = payload["temperature"]
     elif topic == sub_topic_cds_22100768:
         json_data['light_intensity_22100768'] = payload 
-    
-    elif topic == sub_topic_dht22_h_21800677:
-        json_data['humidity_21800677'] = payload 
-    elif topic == sub_topic_dht22_t_21800677:
-        json_data['temperature_21800677'] = payload 
+
+    elif topic == sub_topic_dht22_21800677:
+        payload = json.loads(payload)
+        json_data['humidity_21800677'] = payload["humidity"]
+        json_data['temperature_21800677'] = payload["temperature"]
     elif topic == sub_topic_cds_21800677:
         json_data['light_intensity_21800677'] = payload 
-    
-    elif topic == sub_topic_dht22_h_nth405:
-        json_data['humidity_nth405'] = payload 
+
     elif topic == sub_topic_dht22_t_nth405:
-        json_data['temperature_nth405'] = payload 
+        json_data['temperature_nth405'] = payload
+    elif topic == sub_topic_dht22_h_nth405:
+        json_data['humidity_nth405'] = payload
     elif topic == sub_topic_cds_nth405:
         json_data['light_intensity_nth405'] = payload 
+    
+    
 
     mqtt_message = payload
-    print("Topic: " + topic + "	message: " + mqtt_message)
+    print("Topic: " + topic , end="")
+    print(" message: ", end="")
+    print(mqtt_message)
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=80, debug=False)
