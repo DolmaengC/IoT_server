@@ -54,7 +54,7 @@ json_data = {
     "light_intensity_22100768" : '', 
     "temperature_21800677" : '', 
     "humidity_21800677" : '',
-    "light_intensity_21800677" : '' 
+    "light_intensity_21800677" : '' ,
     "temperature_nth405" : '', 
     "humidity_nth405" : '',
     "light_intensity_nth405" : '' 
