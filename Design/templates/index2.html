@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NodeMCU Control</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body class="text-center">
+    <h1>Welcome to Handong Global University</h1>
+    <h2>NodeMCU Web Server</h2>
+    <a href="/iot/21900764/"><button class="refresh-button">↻</button></a>
+    <div class="table-responsive">
+        <table class="table table-striped-columns">
+            <thead>
+                <th scope="col">Name</th>
+                <th scope="col">21900764</th>
+                <th scope="col">21800677</th>
+                <th scope="col">22100768</th>
+                <th scope="col">nth405</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Temperature (°C)</th>
+                    <td>{{json_data['temperature_21900764']}}</td>
+                    <td>{{json_data['temperature_21800677']}}</td>
+                    <td>{{json_data['temperature_22100768']}}</td>
+                    <td>{{json_data['temperature_nth405']}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Humidity (%)</th>
+                    <td>{{json_data['humidity_21900764']}}</td>
+                    <td>{{json_data['humidity_21800677']}}</td>
+                    <td>{{json_data['humidity_22100768']}}</td>
+                    <td>{{json_data['humidity_nth405']}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">CDS Value</th>
+                    <td>{{json_data['light_intensity_21900764']}}</td>
+                    <td>{{json_data['light_intensity_21800677']}}</td>
+                    <td>{{json_data['light_intensity_22100768']}}</td>
+                    <td>{{json_data['light_intensity_nth405']}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Control</th>
+                    <td>
+                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                            <a href="/iot/21900764/led"><button type="button" class="btn btn-primary">LED TOGGLE</button></a>
+                            <a href="/iot/21900764/ledon"><button type="button" class="btn btn-info">LED ON</button></a>
+                            <a href="/iot/21900764/ledoff"><button type="button" class="btn btn-primary">LED OFF</button></a>
+                            <a href="/iot/21900764/usbled"><button type="button" class="btn btn-info">USBLED TOGGLE</button></a>
+                            <a href="/iot/21900764/usbledon"><button type="button" class="btn btn-primary">USBLED ON</button></a>
+                            <a href="/iot/21900764/usbledff"><button type="button" class="btn btn-info">USBLED OFF</button></a>
+                            <a href="/iot/21900764/cds"><button type="button" class="btn btn-primary">GET CDS</button></a>
+                            <a href="/iot/21900764/dht22"><button type="button" class="btn btn-info">GET DHT</button></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                            <a href="/iot/21800677/led"><button type="button" class="btn btn-primary">LED TOGGLE</button></a>
+                            <a href="/iot/21800677/ledon"><button type="button" class="btn btn-info">LED ON</button></a>
+                            <a href="/iot/21800677/ledoff"><button type="button" class="btn btn-primary">LED OFF</button></a>
+                            <a href="/iot/21800677/usbled"><button type="button" class="btn btn-info">USBLED TOGGLE</button></a>
+                            <a href="/iot/21800677/usbledon"><button type="button" class="btn btn-primary">USBLED ON</button></a>
+                            <a href="/iot/21800677/usbledoff"><button type="button" class="btn btn-info">USBLED OFF</button></a>
+                            <a href="/iot/21800677/cds"><button type="button" class="btn btn-primary">GET CDS</button></a>
+                            <a href="/iot/21800677/dht22"><button type="button" class="btn btn-info">GET DHT</button></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                            <a href="/iot/22100768/led"><button type="button" class="btn btn-primary">LED TOGGLE</button></a>
+                            <a href="/iot/22100768/ledon"><button type="button" class="btn btn-info">LED ON</button></a>
+                            <a href="/iot/22100768/ledoff"><button type="button" class="btn btn-primary">LED OFF</button></a>
+                            <a href="/iot/22100768/usbled"><button type="button" class="btn btn-info">USBLED TOGGLE</button></a>
+                            <a href="/iot/22100768/usbledon"><button type="button" class="btn btn-primary">USBLED ON</button></a>
+                            <a href="/iot/22100768/usbledoff"><button type="button" class="btn btn-info">USBLED OFF</button></a>
+                            <a href="/iot/22100768/cds"><button type="button" class="btn btn-primary">GET CDS</button></a>
+                            <a href="/iot/22100768/dht22"><button type="button" class="btn btn-info">GET DHT</button></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                            <a href="/iot/nth405/led"><button type="button" class="btn btn-primary">LED TOGGLE</button></a>
+                            <a href="/iot/nth405/ledon"><button type="button" class="btn btn-info">LED ON</button></a>
+                            <a href="/iot/nth405/ledoff"><button type="button" class="btn btn-primary">LED OFF</button></a>
+                            <a href="/iot/nth405/usbled"><button type="button" class="btn btn-info">USBLED TOGGLE</button></a>
+                            <a href="/iot/nth405/usbledon"><button type="button" class="btn btn-primary">USBLED ON</button></a>
+                            <a href="/iot/nth405/usbledoff"><button type="button" class="btn btn-info">USBLED OFF</button></a>
+                            <a href="/iot/nth405/cds"><button type="button" class="btn btn-primary">GET CDS</button></a>
+                            <a href="/iot/nth405/dht22"><button type="button" class="btn btn-info">GET DHT</button></a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+                    
+                    
