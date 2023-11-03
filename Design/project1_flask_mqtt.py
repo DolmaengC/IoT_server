@@ -62,14 +62,6 @@ json_data = {
 
 print('@@ Use URL:/iot/21900764/{led,ledon,ledoff,dht22,cds}')
 
-@app.route('/iot/21900764/')
-def my_home():
-    return render_template('index.html', json_data=json_data) 
-
-@app.route('/')
-def home():
-    return render_template('index.html', json_data=json_data) 
-
 # cmd = {led, ledon, ledoff, usbled, usbledon, usbledoff}
 @app.route('/iot/21900764/<cmd>') 
 def get_command_21900764(cmd):
@@ -169,6 +161,10 @@ def get_command_nth405(cmd):
 	elif cmd == 'usbledoff':
 		mqtt.publish(pub_topic_nth405, 'usbledoff')
 		return render_template('index.html', json_data=json_data) 
+
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('index.html', json_data=json_data)
 
 # When mqtt is connected, subscribe to following topics
 @mqtt.on_connect()
