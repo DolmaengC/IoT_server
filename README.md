@@ -19,8 +19,8 @@ NodeMCU 코드는 센서 데이터를 수집하고, MQTT 프토콜을 통해 이
 웹 페이지는 Bootstrap을 이용하여 제작되었습니다. 웹 페이지는 웹 서버로부터 받은 센서 데이터를 표시하고, 사용자의 명령을 웹 서버에 전달하는 인터페이스를 제공합니다.   
 전송받은 센서 데이터와 LED, USBLED의 상태를 제어하는(ON, OFF, Toggle) Detail View 페이지와 전송받은 센서 데이터와 USLED, LED의 Toggle 버튼만 제공하는 Easy View 페이지가 있습니다.
 
-[웹 페이지 코드(Detail view](Design/templates/index.html)
-[웹 페이지 코드(Easy view](Design/templates/index.html)
+[웹 페이지 코드(Detail view)](Design/templates/index.html)   
+[웹 페이지 코드(Easy view)](Design/templates/index_easy_view.html)
 
 ## 사용 방법
 
