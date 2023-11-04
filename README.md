@@ -31,12 +31,14 @@ NodeMCU 코드는 센서 데이터를 수집하고, MQTT 프토콜을 통해 이
 
 ## 필요 사항
 
-- NodeMCU
+- NodeMCU(ESP8266)
 - 온도 센서 (DHT22)
 - 습도 센서 (DHT22)
 - 빛 센서 (CDS)
 - LED
 - USB LED
+- Relay
+- OLED display(Adafriut SSD1306 0.96" 128x32 I2C)
 - MQTT 브로커 서버
 - Python Flask 웹 서버
 
