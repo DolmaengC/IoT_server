@@ -13,7 +13,7 @@
 
 NodeMCU 코드는 센서 데이터를 수집하고, MQTT 프토콜을 통해 이를 웹 서버에 전송하는 역할을 합니다. 또한, 웹 서버로부터 받은 명령을 통해 LED와 USB LED의 상태를 제어합니다. 동시에, 수집한 센서 데이터는 OLED display를 통해 출력됩니다 
 
-[NodeMCU 코드](https://github.com/DolmaengC/IoT_server/blob/caca4eda117c139555ffdad51d6faab500827d9aDesign/Arduino/project1/project1.ino) 
+[NodeMCU 코드](https://github.com/DolmaengC/IoT_server/blob/c7bd96caf1aaaa51e9656ce9221cfe8514bfdad4/Design/Arduino/project1/project1.ino)
 
 ### 2. 웹 서버 코드 
 
@@ -26,8 +26,8 @@ NodeMCU 코드는 센서 데이터를 수집하고, MQTT 프토콜을 통해 이
 웹 페이지는 Bootstrap을 이용하여 제작되었습니다. 웹 페이지는 웹 서버로부터 받은 센서 데이터를 표시하고, 사용자의 명령을 웹 서버에 전달하는 인터페이스를 제공합니다.   
 전송받은 센서 데이터와 LED, USBLED의 상태를 제어하는(ON, OFF, Toggle) Detail View 페이지와 전송받은 센서 데이터와 USLED, LED의 Toggle 버튼만 제공하는 Easy View 페이지가 있습니다.
 
-[웹 페이지 코드(Detail view)](https://github.com/DolmaengC/IoT_server/blob/caca4eda117c139555ffdad51d6faab500827d9aDesign/templates/index.html)   
-[웹 페이지 코드(Easy view)](https://github.com/DolmaengC/IoT_server/blob/caca4eda117c139555ffdad51d6faab500827d9aDesign/templates/index_easy_view.html)   
+[웹 페이지 코드(Detail view)](https://github.com/DolmaengC/IoT_server/blob/c7bd96caf1aaaa51e9656ce9221cfe8514bfdad4/Design/templates/index.html)
+[웹 페이지 코드(Easy view)](https://github.com/DolmaengC/IoT_server/blob/c7bd96caf1aaaa51e9656ce9221cfe8514bfdad4/Design/templates/index_easy_view.html)
 
 ## 사용 방법
 
