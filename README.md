@@ -4,7 +4,7 @@
 
 ## 1. NodeMCU 코드
 
-NodeMCU 코드는 센서 데이터를 수집하고, MQTT 프토콜을 통해 이를 웹 서버에 전송하는 역할을 합니다. 또한, 웹 서버로부터 받은 명령을 통해 LED와 USB LED의 상태를 제어합니다. 
+NodeMCU 코드는 센서 데이터를 수집하고, MQTT 프토콜을 통해 이를 웹 서버에 전송하는 역할을 합니다. 또한, 웹 서버로부터 받은 명령을 통해 LED와 USB LED의 상태를 제어합니다. 동시에, 수집한 센서 데이터는 OLED display를 통해 출력됩니다 
 
 [NodeMCU 코드](Design/Arduino/project1/project1.ino)
 
