@@ -20,7 +20,12 @@
 - DHT22 (온도, 습도 센서): NodeMCU의 D3 핀에 연결
 - CDS (조도 센서): NodeMCU의 A0 핀에 연결
 - LED: NodeMCU의 D0 핀에 연결
-- USB LED: NodeMCU의 D4 핀에 연결
+- Relay/USB LED: NodeMCU의 D4 핀에 연결
+- OLED display:
+  - SCL: NodeMCU의 D1 핀에 연결,
+  - Vin: NodeMCU의 3.3V 핀에 연결
+  - GND: NodeMCU의 GND 핀에 연결
+  - SDA: NodeMCU의 D2 핀에 연결  
 
 ## 2단계: NodeMCU 코드 업로드
 
