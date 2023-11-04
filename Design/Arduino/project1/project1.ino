@@ -255,7 +255,7 @@ void loop() {
 void OLED_Print_text(float humidity, float temperature, float light_value) {
   display.clearDisplay();
 
-  display.setTextSize(1.5); // Draw 1.5X-scale text
+  display.setTextSize(2); // Draw 1.5X-scale text
   display.setTextColor(SSD1306_WHITE);
   display.setCursor(0, 0);
   display.print(F("T: "));
@@ -265,8 +265,6 @@ void OLED_Print_text(float humidity, float temperature, float light_value) {
   display.print(F("H: "));
   display.print(humidity);
   display.println(F("%"));
-  display.print(F("L: "));
-  display.println(lightValue);
   display.display();      // Show initial text
   delay(100);
 }
