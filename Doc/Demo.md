@@ -1,4 +1,4 @@
-# 노드MCU를 이용한 IoT 시스템 구축 프로젝트
+# DEMO.MD
 
 이 문서는 노드MCU를 이용해 IoT 시스템을 구축하는 방법에 대해 설명합니다. 이 프로젝트에서는 온도, 습도, 빛 센서를 이용하며, LED와 USB LED를 제어하는 기능을 포함하고 있습니다.
 
@@ -81,15 +81,26 @@ void loop() {
 ### 웹페이지
 
 #### Main View
+<img width="1282" alt="KakaoTalk_20231104_204219329_06" src="https://github.com/DolmaengC/IoT_server/assets/100391405/b634693e-fbc0-4d4f-9f74-21f826adf193">
 
 #### Easy View
+<img width="1282" alt="KakaoTalk_20231104_204219329_05" src="https://github.com/DolmaengC/IoT_server/assets/100391405/91421dbd-892d-43bd-9a67-1278fac882a3">
+
 
 ### 반응형 HTML
+<img width="539" alt="KakaoTalk_20231104_204207740" src="https://github.com/DolmaengC/IoT_server/assets/100391405/ebd4297c-8cc0-42f1-84ee-41d66a120c15">
 
 #### 404 Handling
+<img width="1159" alt="KakaoTalk_20231104_204219329_04" src="https://github.com/DolmaengC/IoT_server/assets/100391405/aa450353-6ed2-4dd7-898e-0976109361c8">
 
 ### OLED
+![KakaoTalk_20231104_204219329_01](https://github.com/DolmaengC/IoT_server/assets/100391405/743b57ff-cd86-4c64-9c84-e20ed43f3a09)
 
 ### Relay/USBLED ON/OFF
+![KakaoTalk_20231104_203815904](https://github.com/DolmaengC/IoT_server/assets/100391405/93d83ddb-6572-4ff2-ad03-6b09323b75c3)
+![KakaoTalk_20231104_203815904_01](https://github.com/DolmaengC/IoT_server/assets/100391405/1e4c76fa-a0aa-41d3-8ef7-fccae0eb4e77)
 
 ### LED ON/OFF
+![KakaoTalk_20231104_203815904_02](https://github.com/DolmaengC/IoT_server/assets/100391405/36d3241f-feff-4141-bacb-b0444aab814d)
+![KakaoTalk_20231104_203815904_03](https://github.com/DolmaengC/IoT_server/assets/100391405/3620687b-a40b-4e6d-9ca6-f5a9df51ecbf)
+
